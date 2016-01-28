@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<script src="object.js"></script>
+	<script src="jquery.min.js"></script>
+</head>
+<body>
+	<img src="bird.png" width="300" height="300" alt="" onClick="resetTeller()" />
+	<p id="msg"></p>
+
+	<script>
+		var msgBox = $("p#msg");
+		var teller = 1;
+
+		var resetTeller = function() {
+			teller = 0;
+		}
+
+		setInterval(function() {
+			msgBox.html(teller);
+			teller++;
+		}, 1000);
+	</script>
+</body>
+</html>
